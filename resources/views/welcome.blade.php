@@ -37,22 +37,21 @@
                 </div>
             </div>
 
-            <div class="flex items-center space-x-3">
+            <div class="flex items-center space-x-2">
                 @if (Route::has('login'))
                     @auth
-                        <a href="{{ url('/dashboard') }}" class="px-4 py-2 rounded-lg text-xs font-semibold text-white bg-slate-900 hover:bg-slate-800 transition">
+                        <a href="{{ url('/dashboard') }}" class="px-4 py-2 rounded-xl text-xs font-bold text-white bg-slate-900 hover:bg-slate-800 transition">
                             Buka Dashboard →
                         </a>
                     @else
-                        <form method="POST" action="{{ route('demo.login') }}">
-                            @csrf
-                            <button type="submit" class="px-4 py-2 rounded-lg text-xs font-semibold text-white bg-gradient-to-r from-sky-600 to-teal-600 hover:from-sky-700 hover:to-teal-700 shadow-sm transition">
-                                Demo Masuk Langsung (1-Klik) →
-                            </button>
-                        </form>
-                        <a href="{{ route('login') }}" class="px-3.5 py-1.5 rounded-lg text-xs font-medium text-slate-600 hover:text-slate-900 hover:bg-slate-100 transition">
+                        <a href="{{ route('login') }}" class="px-4 py-2 rounded-xl text-xs font-bold text-slate-700 hover:text-slate-900 hover:bg-slate-100 transition">
                             Masuk
                         </a>
+                        @if (Route::has('register'))
+                            <a href="{{ route('register') }}" class="px-4 py-2 rounded-xl text-xs font-bold text-white bg-gradient-to-r from-sky-600 via-teal-600 to-emerald-600 hover:opacity-95 shadow-sm transition">
+                                Daftar Akun
+                            </a>
+                        @endif
                     @endauth
                 @endif
             </div>
@@ -98,16 +97,22 @@
 
             <!-- Primary Actions -->
             <div class="mt-10 flex flex-col sm:flex-row items-center justify-center gap-3">
-                <form method="POST" action="{{ route('demo.login') }}" class="w-full sm:w-auto">
-                    @csrf
-                    <button type="submit" class="w-full sm:w-auto px-6 py-3.5 rounded-xl font-bold text-sm text-white bg-gradient-to-r from-sky-600 via-teal-600 to-emerald-600 hover:opacity-95 shadow-md shadow-teal-600/20 transition flex items-center justify-center space-x-2">
-                        <span>Buka Research OS (Eksplorasi Contoh Smart Soil)</span>
+                @auth
+                    <a href="{{ route('dashboard') }}" class="w-full sm:w-auto px-6 py-3.5 rounded-xl font-bold text-sm text-white bg-gradient-to-r from-sky-600 via-teal-600 to-emerald-600 hover:opacity-95 shadow-md shadow-teal-600/20 transition flex items-center justify-center space-x-2">
+                        <span>Buka Dashboard Riset</span>
                         <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
-                    </button>
-                </form>
-                <a href="{{ route('login') }}" class="w-full sm:w-auto px-5 py-3.5 rounded-xl font-semibold text-sm text-slate-700 bg-white border border-slate-200 hover:bg-slate-50 transition">
-                    Masuk dengan Akun Pribadi
-                </a>
+                    </a>
+                @else
+                    <a href="{{ route('login') }}" class="w-full sm:w-auto px-6 py-3.5 rounded-xl font-bold text-sm text-white bg-gradient-to-r from-sky-600 via-teal-600 to-emerald-600 hover:opacity-95 shadow-md shadow-teal-600/20 transition flex items-center justify-center space-x-2">
+                        <span>Masuk ke Workspace Riset</span>
+                        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
+                    </a>
+                    @if (Route::has('register'))
+                        <a href="{{ route('register') }}" class="w-full sm:w-auto px-5 py-3.5 rounded-xl font-semibold text-sm text-slate-700 bg-white border border-slate-200 hover:bg-slate-50 transition">
+                            Daftar Akun Peneliti
+                        </a>
+                    @endif
+                @endauth
             </div>
 
             <!-- 4 Principle Pillars Cards -->

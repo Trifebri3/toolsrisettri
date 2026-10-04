@@ -12,11 +12,10 @@ use App\Http\Controllers\ResearchIdeaController;
 use App\Http\Controllers\ResearchOutputController;
 use App\Http\Controllers\ResearchProjectController;
 use App\Http\Controllers\ResearchQuestionController;
-use App\Models\User;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 
-// Landing & Quick Demo Access
+// Landing Page
 Route::get('/', function () {
     if (Auth::check()) {
         return redirect()->route('dashboard');
@@ -24,17 +23,6 @@ Route::get('/', function () {
 
     return view('welcome');
 });
-
-Route::post('/demo-login', function () {
-    $user = User::where('email', 'trifebriansah321@gmail.com')->first()
-        ?? User::where('email', 'researcher@research-os.org')->first()
-        ?? User::first();
-    if ($user) {
-        Auth::login($user);
-    }
-
-    return redirect()->route('dashboard');
-})->name('demo.login');
 
 // PWA Offline Fallback Page
 Route::get('/offline', function () {
