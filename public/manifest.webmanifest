@@ -1,0 +1,100 @@
+{
+  "name": "Research OS — Research Repository & Paper Builder",
+  "short_name": "Research OS",
+  "description": "Personal Research Management & Evidence-Based Academic Manuscript Builder",
+  "id": "/?source=pwa",
+  "start_url": "/dashboard",
+  "scope": "/",
+  "display": "standalone",
+  "orientation": "any",
+  "background_color": "#fbfcfd",
+  "theme_color": "#0f766e",
+  "lang": "id",
+  "categories": [
+    "education",
+    "productivity",
+    "utilities"
+  ],
+  "icons": [
+    {
+      "src": "/icons/icon-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "/icons/icon-maskable-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "maskable"
+    },
+    {
+      "src": "/icons/icon-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "/icons/icon-maskable-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "maskable"
+    },
+    {
+      "src": "/icons/icon.svg",
+      "sizes": "512x512",
+      "type": "image/svg+xml",
+      "purpose": "any"
+    }
+  ],
+  "shortcuts": [
+    {
+      "name": "Tangkap Ide Baru",
+      "short_name": "Ide Baru",
+      "description": "Catat ide dan hipotesis penelitian baru",
+      "url": "/ideas?action=capture",
+      "icons": [
+        {
+          "src": "/icons/icon-192x192.png",
+          "sizes": "192x192"
+        }
+      ]
+    },
+    {
+      "name": "Smart Soil Workspace",
+      "short_name": "Workspace",
+      "description": "Buka workspace penelitian Smart Soil IoT",
+      "url": "/projects/1",
+      "icons": [
+        {
+          "src": "/icons/icon-192x192.png",
+          "sizes": "192x192"
+        }
+      ]
+    },
+    {
+      "name": "Matriks Literatur",
+      "short_name": "Literatur",
+      "description": "Lihat ekstraksi literatur dan gap analysis",
+      "url": "/literature",
+      "icons": [
+        {
+          "src": "/icons/icon-192x192.png",
+          "sizes": "192x192"
+        }
+      ]
+    },
+    {
+      "name": "Target Luaran",
+      "short_name": "Luaran",
+      "description": "Pantau pipeline jurnal dan publikasi",
+      "url": "/outputs",
+      "icons": [
+        {
+          "src": "/icons/icon-192x192.png",
+          "sizes": "192x192"
+        }
+      ]
+    }
+  ]
+}

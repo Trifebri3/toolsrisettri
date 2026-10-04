@@ -1,0 +1,57 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0284c7" />
+      <stop offset="50%" stop-color="#0d9488" />
+      <stop offset="100%" stop-color="#059669" />
+    </linearGradient>
+    <linearGradient id="glowGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#38bdf8" stop-opacity="0.8" />
+      <stop offset="100%" stop-color="#34d399" stop-opacity="0.8" />
+    </linearGradient>
+    <filter id="shadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="8" stdDeviation="12" flood-color="#0f172a" flood-opacity="0.25" />
+    </filter>
+  </defs>
+
+  <!-- Background Card -->
+  <rect width="512" height="512" rx="112" fill="url(#bgGrad)" />
+
+  <!-- Inner Ambient Glow -->
+  <rect x="24" y="24" width="464" height="464" rx="96" fill="none" stroke="url(#glowGrad)" stroke-width="4" stroke-opacity="0.4" />
+
+  <!-- Research OS Symbol: Scientific Evidence Nodes & Knowledge Document -->
+  <g filter="url(#shadow)" transform="translate(106, 96)">
+    <!-- Base Document Sheet -->
+    <path d="M40 0 H200 L260 60 V300 C260 311 251 320 240 320 H40 C29 320 20 311 20 300 V20 C20 9 29 0 40 0 Z" fill="#ffffff" fill-opacity="0.95" />
+    <path d="M200 0 V60 H260 Z" fill="#e2e8f0" />
+
+    <!-- Document Lines -->
+    <rect x="52" y="70" width="120" height="12" rx="6" fill="#0f766e" />
+    <rect x="52" y="100" width="160" height="10" rx="5" fill="#94a3b8" />
+    <rect x="52" y="125" width="140" height="10" rx="5" fill="#94a3b8" />
+    <rect x="52" y="150" width="110" height="10" rx="5" fill="#94a3b8" />
+
+    <!-- Connected Evidence Graph Nodes -->
+    <!-- Edge Lines -->
+    <line x1="70" y1="230" x2="140" y2="190" stroke="#0d9488" stroke-width="6" stroke-linecap="round" />
+    <line x1="140" y1="190" x2="210" y2="240" stroke="#0d9488" stroke-width="6" stroke-linecap="round" />
+    <line x1="140" y1="190" x2="140" y2="270" stroke="#0284c7" stroke-width="6" stroke-linecap="round" />
+
+    <!-- Nodes -->
+    <circle cx="70" cy="230" r="16" fill="#0284c7" />
+    <circle cx="70" cy="230" r="8" fill="#ffffff" />
+
+    <circle cx="140" cy="190" r="22" fill="#0d9488" />
+    <circle cx="140" cy="190" r="10" fill="#ffffff" />
+
+    <circle cx="210" cy="240" r="16" fill="#059669" />
+    <circle cx="210" cy="240" r="8" fill="#ffffff" />
+
+    <circle cx="140" cy="270" r="14" fill="#14b8a6" />
+    <circle cx="140" cy="270" r="7" fill="#ffffff" />
+  </g>
+
+  <!-- Atom / Innovation Orbit -->
+  <ellipse cx="256" cy="256" rx="200" ry="85" fill="none" stroke="#ffffff" stroke-width="6" stroke-dasharray="16 12" stroke-opacity="0.35" transform="rotate(-30 256 256)" />
+</svg>
